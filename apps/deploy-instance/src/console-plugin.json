@@ -1,0 +1,16 @@
+{
+  "extensions": [
+    {
+      "type": "console-platform/operator/instance/forms",
+      "options": {
+        "operator": "argocd-operator",
+        "instances": {
+          "argocdexports": {
+            "create": "InstanceCreateComponent",
+            "update": "InstanceUpdateComponent"
+          }
+        }
+      }
+    }
+  ]
+}

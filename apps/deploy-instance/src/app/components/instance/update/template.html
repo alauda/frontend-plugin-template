@@ -1,0 +1,8 @@
+@if (initResource()) {
+  <app-instance-form
+    action="update"
+    [cluster]="cluster()"
+    [initResource]="initResource()"
+    (afterSubmitted)="afterSubmitted()($event)"
+  ></app-instance-form>
+}

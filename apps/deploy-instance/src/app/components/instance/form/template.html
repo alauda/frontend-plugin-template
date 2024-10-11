@@ -1,0 +1,69 @@
+<aui-card>
+  <div auiCardHeader>
+    {{
+      (action() === 'update' ? 'update_xxx' : 'create_xxx')
+        | translate : { xxx: ' ArgoCDExport' }
+    }}
+  </div>
+  <form>
+    <aui-form-item width="large">
+      <label auiFormItemLabel>{{ 'name' | translate }}</label>
+      <input
+        auiFormItemControl
+        aui-input
+        #name="ngModel"
+        name="name"
+        [(ngModel)]="model.metadata.name"
+        [readonly]="action() === 'update'"
+        required
+      />
+      <acl-errors-mapper
+        auiFormItemError
+        [errors]="name.errors"
+      ></acl-errors-mapper>
+    </aui-form-item>
+    <aui-form-item width="large">
+      <label auiFormItemLabel>{{ 'namespace' | translate }}</label>
+      <input
+        auiFormItemControl
+        aui-input
+        #namespace="ngModel"
+        name="namespace"
+        [(ngModel)]="model.metadata.namespace"
+        [readonly]="action() === 'update'"
+        required
+      />
+      <acl-errors-mapper
+        auiFormItemError
+        [errors]="namespace.errors"
+      ></acl-errors-mapper>
+    </aui-form-item>
+    <aui-form-item width="large">
+      <label auiFormItemLabel>ArgoCD</label>
+      <input
+        auiFormItemControl
+        aui-input
+        #argoCD="ngModel"
+        name="argoCD"
+        [(ngModel)]="model.spec.argocd"
+        required
+      />
+      <acl-errors-mapper
+        auiFormItemError
+        [errors]="argoCD.errors"
+      ></acl-errors-mapper>
+    </aui-form-item>
+  </form>
+</aui-card>
+
+<div class="resource-form__footer">
+  <button
+    aui-button="primary"
+    [loading]="submitting()"
+    [disabled]="submitting()"
+    (click)="submit()"
+  >
+    {{ (action() === 'update' ? 'update' : 'create') | translate }}
+  </button>
+  <button aui-button aclInterceptDeactivate>{{ 'cancel' | translate }}</button>
+</div>

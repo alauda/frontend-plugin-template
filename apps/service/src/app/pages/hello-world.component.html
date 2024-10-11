@@ -1,0 +1,6 @@
+<aui-card>
+  <div auiCardHeader>{{ 'hello_world' | scopedTranslate }}</div>
+  <button aui-button="primary" (click)="sayHello()">
+    {{ 'say_hello' | scopedTranslate }}, {{ cluster() }}
+  </button>
+</aui-card>

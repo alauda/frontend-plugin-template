@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/@alauda-fe/common/styles/reset-browser';
+@import 'node_modules/@alauda/ui/theme/style';
+
+@import 'node_modules/@alauda-fe/common/styles/mixins';
+
+app-root {
+  padding: 20px;
+  @include app-root;
+}
