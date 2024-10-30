@@ -1,0 +1,62 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: '0.2'
+useGitignore: true
+language: en,en-GB,en-US
+dictionaryDefinitions:
+  - name: abbreviations
+    path: .cspell/abbreviations.txt
+    addWords: true
+  - name: brands
+    path: .cspell/brands.txt
+    addWords: true
+  - name: compound
+    path: .cspell/compound.txt
+    addWords: true
+  - name: custom-words
+    path: .cspell/custom-words.txt
+    addWords: true
+  - name: frontend
+    path: .cspell/frontend.txt
+    addWords: true
+  - name: k8s
+    path: .cspell/k8s.txt
+    addWords: true
+  - name: libraries
+    path: .cspell/libraries.txt
+    addWords: true
+  - name: terms
+    path: .cspell/terms.txt
+    addWords: true
+dictionaries:
+  - abbreviations
+  - backend-typo
+  - brands
+  - compound
+  - custom-words
+  - frontend
+  - k8s
+  - libraries
+  - terms
+files: []
+ignorePaths:
+  - .cspell
+  - .gitignore
+  - .yarn
+  - dist
+  - patches
+  - yarn.lock
+  - '*.{log,svg,snap}'
+  - catalog-fe.yaml
+  - '*/**/catalog-info.yaml'
+  - '*/**/assets/**/*-icons.js'
+  - .build
+  - apps/service/integration-tests
+ignoreWords:
+  - 'envoyfiltercreate'
+  - 'buildkit'
+  - 'WORKDIR'
+  - 'cucumberjs'
+  - 'pipelinesascode'
+  - 'ngrx'
+ignoreRegExpList:
+  - /(例如|e\.g\.( ssh-rsa)?|ssh-rsa) [\w\/]+/

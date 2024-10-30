@@ -1,0 +1,79 @@
+{
+  "extends": [
+    "@1stg/stylelint-config/loose"
+  ],
+  "ignoreFiles": [
+    "dist",
+    "node_modules"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.html",
+        "**/*.ts"
+      ],
+      "rules": {
+        "function-url-quotes": null
+      }
+    },
+    {
+      "files": [
+        "**/*.scss"
+      ],
+      "rules": {
+        "scss/at-rule-no-unknown": [
+          true,
+          {
+            "ignoreAtRules": [
+              "tailwind",
+              "layer",
+              "apply",
+              "variants",
+              "responsive",
+              "screen"
+            ]
+          }
+        ],
+        "scss/function-no-unknown": [
+          true,
+          {
+            "ignoreFunctions": [
+              "get-size",
+              "split-str",
+              "use-rgb",
+              "use-rgba",
+              "use-text-color",
+              "use-var"
+            ]
+          }
+        ],
+        "value-keyword-case": null,
+        "plugin/no-unsupported-browser-features": null
+      }
+    }
+  ],
+  "rules": {
+    "import-notation": "string",
+    "no-descending-specificity": null,
+    "no-invalid-position-at-import-rule": null,
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "ignorePartialSupport": true
+      }
+    ],
+    "selector-class-pattern": null,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "/^(a|acl|alk|alm|alo|alu|anb|aui|mp|ng|rc|tk|cdk)-/",
+          "highcharts-chart",
+          "quill-view-html",
+          "quill-editor",
+          "image-cropper"
+        ]
+      }
+    ]
+  }
+}
