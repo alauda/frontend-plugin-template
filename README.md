@@ -17,3 +17,21 @@
 
 1. 执行 `yarn nx build deploy-instance` 或 `yarn nx build service` 编译插件代码，产出物位于 `./dist/apps`。
 2. 通过 Docker 构建镜像，并在构建时将 `./dist/apps` 目录下的所有内容拷贝至镜像的 `/frontend-plugins` 目录下（可以使用代码仓库内的 `Dockerfile` 进行构建）。
+
+## 在 Operator 内配置使用镜像
+
+- **部署实例 UI**  
+  `cpaas.io/frontend-plugin-deploy-instance-image: <namespace/name:tag>`
+
+- **功能 UI**
+  - 单一：`cpaas.io/frontend-plugin-service-image: <namespace/name:tag>`
+  - 多模块：`cpaas.io/frontend-plugin-service-image-<subpath>: <namespace/name:tag>`
+
+**示例**：
+
+```yaml
+metadata:
+  annotations:
+    cpaas.io/frontend-plugin-deploy-instance-image: frontend/plugin:v1.0.0
+    cpaas.io/frontend-plugin-service-image: frontend/plugin:v1.0.0
+```
