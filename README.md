@@ -5,7 +5,7 @@
 1. 执行 `yarn install` 安装依赖
 2. 执行 `yarn nx serve deploy-instance` 或 `yarn nx serve service` 启动`部署 Operator 实例的 UI 插件`或 `Operator 功能 UI 插件`的本地开发服务，服务端口为 `localhost:5000`。
 3. 进入 `alauda-fe` 项目目录启动要集成插件的项目，启动后产品页面将自动加载 5000 端口上正在运行的插件，此时按需进行调试开发即可。
-4. 如果不想启动 `alauda-fe` 中的插件宿主项目也可以在浏览器打开 `http://localhost:5000` 直接对插件页面进行调试开发。
+4. 也可以在浏览器打开 `http://localhost:5000` 直接对插件页面进行调试开发。
 
 ## 代码结构说明
 

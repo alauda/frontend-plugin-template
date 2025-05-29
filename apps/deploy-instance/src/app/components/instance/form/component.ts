@@ -8,12 +8,10 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { ScopedTranslatePipe } from '../../../translate';
 import {
   ButtonComponent,
   CardModule,
   FormModule,
-  IconComponent,
   InputComponent,
 } from '@alauda/ui';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -32,12 +30,10 @@ import {
   standalone: true,
   imports: [
     TranslatePipe,
-    ScopedTranslatePipe,
     FormsModule,
     FormModule,
     CardModule,
     ButtonComponent,
-    IconComponent,
     InputComponent,
     ErrorsMapperComponent,
     InterceptDeactivateDirective,
@@ -71,22 +67,25 @@ export class InstanceFormComponent implements OnInit {
 
     (this.action() === 'update'
       ? this.k8sApi.putResource
-      : this.k8sApi.postResource).bind(this.k8sApi)({
-      definition: {
-        type: 'argocdexports',
-        apiGroup: 'argoproj.io',
-        apiVersion: 'v1alpha1',
-      },
-      cluster: this.cluster(),
-      resource: this.model,
-    }).subscribe({
-      next: (resource) => {
-        this.submitting.set(false);
-        this.afterSubmitted.emit(resource);
-      },
-      complete: () => {
-        this.submitting.set(false);
-      },
-    });
+      : this.k8sApi.postResource
+    )
+      .bind(this.k8sApi)({
+        definition: {
+          type: 'argocdexports',
+          apiGroup: 'argoproj.io',
+          apiVersion: 'v1alpha1',
+        },
+        cluster: this.cluster(),
+        resource: this.model,
+      })
+      .subscribe({
+        next: (resource) => {
+          this.submitting.set(false);
+          this.afterSubmitted.emit(resource);
+        },
+        complete: () => {
+          this.submitting.set(false);
+        },
+      });
   }
 }

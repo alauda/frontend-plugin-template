@@ -57,17 +57,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alauda-fe/devkit@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@alauda-fe/devkit@npm:1.0.4"
+"@alauda-fe/devkit@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@alauda-fe/devkit@npm:1.0.6"
   dependencies:
-    "@alauda/custom-webpack": "npm:^5.2.1"
+    "@alauda/custom-webpack": "npm:^5.2.2"
     monaco-editor-webpack-plugin: "npm:^7.1.0"
     webpack-merge: "npm:^5.10.0"
     yaml-loader: "npm:^0.8.0"
   peerDependencies:
     "@nx/angular": ^19.5.0
-  checksum: b4480c7d74f0e3c90be89894b95e43621fe75765d5e135e3c60eaed7607cd4e33f0fb570820657b0945b599ce08fd1307f58e2cd59fd5dd6707e6b4ad0f6eccb
+  checksum: 3fbf299f93971ee21b6ebd7c9edfc7bad2ebdb8dfa607dbd1f1f2a90c5c63cd3526da4cd360cbe02e2fe27eb1d38e746e34ccb6fec8cf7df3fcef514a0d45ed4
   languageName: node
   linkType: hard
 
@@ -75,6 +75,18 @@ __metadata:
   version: 1.0.6
   resolution: "@alauda-fe/i18n@npm:1.0.6"
   checksum: 708b7377b0b4aa389eab5b0f3f5b4fc6802f16e2a243d95cf5de21457c89284fd406bbfc2270305c01d052f350189f1a6f34dacb500ec0e1d3d3e84b3dd7a030
+  languageName: node
+  linkType: hard
+
+"@alauda-fe/plugin-sdk@npm:^0.0.12":
+  version: 0.0.12
+  resolution: "@alauda-fe/plugin-sdk@npm:0.0.12"
+  dependencies:
+    compare-versions: "npm:^6.1.0"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@nx/angular": ^16.10.0
+  checksum: 4c22c941f9abc469decb806c9d46fca58534004f151c96eae637faa82ece050de4960051e253e9be6c06d8fcf99c044fe071aa3fb19a3d4750e658a7f2fbbf9c
   languageName: node
   linkType: hard
 
@@ -113,9 +125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alauda/custom-webpack@npm:^5.2.1":
-  version: 5.2.1
-  resolution: "@alauda/custom-webpack@npm:5.2.1"
+"@alauda/custom-webpack@npm:^5.2.2":
+  version: 5.2.6
+  resolution: "@alauda/custom-webpack@npm:5.2.6"
   dependencies:
     "@alauda/jsencrypt": "npm:^3.0.0"
     "@pkgr/es-modules": "npm:^0.6.3"
@@ -141,21 +153,14 @@ __metadata:
     serve-handler: "npm:^6.1.5"
     tesseract.js: "npm:^4.1.1"
     tslib: "npm:^2.6.0"
-    webpack-assets-manifest: "npm:^5.1.0"
+    webpack-assets-manifest: "npm:^5.2.1"
     workbox-webpack-plugin: "npm:^7.0.0"
     yaml: "npm:^2.3.1"
-  peerDependencies:
-    "@angular-devkit/build-angular": ^15.0.0 || ^16.0.0
-    dayjs: ^1.0.0
-    webpack: ^5.0.0
-  peerDependenciesMeta:
-    webpack:
-      optional: true
   bin:
     cce: lib/change-console-env.js
     hm: lib/html-minifier.js
     serve: lib/serve.js
-  checksum: 251f588c14b98168f6470c7d89d055d1a80fec610d9f125bb809d141077e37688bb139158738916cd9a79cce42e698425f0888354abd1940f84950d784ccb268
+  checksum: 95d98fe789178f2dff85c18ce7f5b939e5a0b73f5b6148f515ccab596685e2eb7d4d244b2d6820e9160b356698aded5b111efa7796d347950b1ac3dd99fc11c2
   languageName: node
   linkType: hard
 
@@ -6871,7 +6876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compare-versions@npm:^6.1.1":
+"compare-versions@npm:^6.1.0, compare-versions@npm:^6.1.1":
   version: 6.1.1
   resolution: "compare-versions@npm:6.1.1"
   checksum: 415205c7627f9e4f358f571266422980c9fe2d99086be0c9a48008ef7c771f32b0fbe8e97a441ffedc3910872f917a0675fe0fe3c3b6d331cda6d8690be06338
@@ -12510,8 +12515,9 @@ __metadata:
   resolution: "mfe-plugin@workspace:."
   dependencies:
     "@alauda-fe/common": "npm:^1.3.1"
-    "@alauda-fe/devkit": "npm:^1.0.4"
+    "@alauda-fe/devkit": "npm:^1.0.6"
     "@alauda-fe/i18n": "npm:^1.0.6"
+    "@alauda-fe/plugin-sdk": "npm:^0.0.12"
     "@alauda/chart": "npm:^0.1.12"
     "@alauda/code-editor": "npm:^5.2.1"
     "@alauda/ui": "npm:^8.0.0"
@@ -17459,7 +17465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-assets-manifest@npm:^5.1.0":
+"webpack-assets-manifest@npm:^5.2.1":
   version: 5.2.1
   resolution: "webpack-assets-manifest@npm:5.2.1"
   dependencies:

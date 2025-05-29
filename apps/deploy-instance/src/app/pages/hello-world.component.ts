@@ -4,7 +4,7 @@ import {
   CardHeaderDirective,
 } from '@alauda/ui';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ScopedTranslatePipe } from '../translate';
+import { ScopedTranslatePipe } from '@alauda-fe/plugin-sdk/remote';
 
 @Component({
   standalone: true,

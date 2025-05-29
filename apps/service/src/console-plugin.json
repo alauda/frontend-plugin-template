@@ -11,7 +11,7 @@
       "type": "console-platform/navigation",
       "options": {
         "name": "helloworld",
-        "displayName": { "en": "Hello World", "zh": "你好，世界" },
+        "displayNameKey": "hello_world",
         "href": "$cluster/helloworld",
         "insertBefore": "overview"
       }
@@ -27,7 +27,7 @@
       "options": {
         "group": "namespace_scope",
         "name": "helloworld",
-        "displayName": { "en": "Hello World", "zh": "你好，世界" },
+        "displayNameKey": "hello_world",
         "href": "helloworld",
         "insertBefore": "overview"
       }
